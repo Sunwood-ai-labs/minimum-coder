@@ -170,3 +170,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 .SourceSageAssets/Repository_summary.md
+release-notes.md
