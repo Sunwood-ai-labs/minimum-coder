@@ -33,11 +33,13 @@ Minimum Coderは以下の機能を提供する最小限のセットアップを�
 - 💻 主要なIDEサポート（VS Code、JetBrains等）
 - 🔒 セキュアなリモートアクセス
 - 🚀 高速な開発環境
+- 🎯 カスタマイズ可能なワークスペーステンプレート
 
 ## ⚙️ 動作環境
 
 - Docker
 - Docker Compose
+- Terraform
 
 ## 📦 インストール
 
@@ -52,22 +54,51 @@ cd minimum-coder
 docker-compose up -d
 ```
 
+3. Terraformテンプレートの設定：
+```bash
+# Dockerテンプレートを作成
+coder templates create docker --directory templates/docker
+```
+
 ## 🚀 使用方法
 
-1. ブラウザで開発環境にアクセス：
-```
-http://localhost:3000
+1. ワークスペースの作成：
+```bash
+coder create --template docker my-workspace
 ```
 
-2. お好みのIDEを使用して開発を開始
+2. ブラウザで開発環境にアクセス：
+```
+http://localhost:7080
+```
+
+3. お好みのIDEを使用して開発を開始
 
 ## 🔧 設定
 
-設定は`docker-compose.yaml`で管理されています。主な設定項目：
+### Docker Compose設定
+設定は`docker-compose.yaml`で管理されています：
+- ポート設定（デフォルト: 7080）
+- データベース設定
+- ボリューム設定
 
-- ポート設定
-- 開発環境の基本設定
-- ストレージ設定
+### ワークスペーステンプレート
+`templates`ディレクトリには以下のテンプレートが用意されています：
+
+#### 🐳 Dockerテンプレート (`templates/docker`)
+- 基本的な開発環境の構築
+- VS Code拡張機能の自動インストール
+  - Python、Go、Docker、Terraform等
+- リソースモニタリング機能
+- Git設定の自動化
+
+詳細な設定方法は各テンプレートのREADMEを参照してください。
+
+## 🔐 セキュリティ設定
+
+Webviewを使用する拡張機能（Roo Clineなど）を使用する場合は、追加のセキュリティ設定が必要です。
+
+本番環境向けの設定方法と開発環境向けの簡易設定方法について、[セキュリティドキュメント](docs/security-docs.md)で詳しく説明しています。
 
 ## 🤝 貢献
 
