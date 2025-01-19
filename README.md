@@ -2,7 +2,26 @@
   <img src="./assets/header.svg" alt="Minimum Coder Header" width="800">
 </p>
 
-# 🌟 Minimum Coder
+<h1 align="center">🌟 Minimum Coder</h1>
+
+<p align="center">
+  <a href="https://github.com/coder/coder/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/coder/coder?color=3AB2E6&style=for-the-badge">
+  </a>
+  <a href="https://github.com/Sunwood-ai-labs/minimum-coder/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Sunwood-ai-labs/minimum-coder?color=3AB2E6&style=for-the-badge">
+  </a>
+  <a href="https://github.com/Sunwood-ai-labs/minimum-coder/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/Sunwood-ai-labs/minimum-coder?color=3AB2E6&style=for-the-badge">
+  </a>
+</p>
+
+<p align="center">
+  <img alt="Docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">
+  <img alt="VS Code" src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white">
+  <img alt="Ubuntu" src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
+  <img alt="Go" src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white">
+</p>
 
 これは[Coder](https://github.com/coder/coder)の最小構成版です。リモート開発環境を簡単にセットアップし、どこからでも開発作業が行えるようにする軽量なソリューションです。
 
