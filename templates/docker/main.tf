@@ -66,9 +66,18 @@ resource "coder_agent" "main" {
       /tmp/code-server/bin/code-server --install-extension redhat.vscode-yaml
       /tmp/code-server/bin/code-server --install-extension rooveterinaryinc.roo-cline
       /tmp/code-server/bin/code-server --install-extension ms-azuretools.vscode-docker
+      /tmp/code-server/bin/code-server --install-extension shalldie.background
+      /tmp/code-server/bin/code-server --install-extension buianhthang.gitflow
+      /tmp/code-server/bin/code-server --install-extension bierner.markdown-preview-github-styles
+      /tmp/code-server/bin/code-server --install-extension yzhang.markdown-all-in-one
+      /tmp/code-server/bin/code-server --install-extension jock.svg
+      /tmp/code-server/bin/code-server --install-extension mhutchie.git-graph
+      /tmp/code-server/bin/code-server --install-extension qwtel.sqlite-viewer
+      
+
 
       # Start code-server in the background.
-      /tmp/code-server/bin/code-server --auth none --port 13337 --cert --cert-host localhost >/tmp/code-server.log 2>&1 &
+      /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
   EOT
 
   # These environment variables allow you to make Git commits right away after creating a
@@ -212,7 +221,7 @@ resource "docker_container" "workspace" {
   volumes {
     container_path = "/home/${local.username}"
     volume_name    = docker_volume.home_volume.name
-    read_only     = false
+    read_only      = false
   }
 
   # Add labels in Docker to keep track of orphan resources.
