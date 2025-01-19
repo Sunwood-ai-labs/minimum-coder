@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.svg" alt="Minimum Coder Header" width="800">
+  <img src="./assets/header.png" alt="Minimum Coder Header" width="800">
 </p>
 
 <h1 align="center">🌟 Minimum Coder</h1>
